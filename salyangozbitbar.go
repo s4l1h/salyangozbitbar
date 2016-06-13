@@ -134,8 +134,9 @@ func main() {
 :arrows_counterclockwise: Refresh | href=bitbar://refreshPlugin?name=salyangoz* color=#66cc00 size=16
 `)
 	for _, post := range posts.Posts {
-		fmt.Printf("%s \n-- :bust_in_silhouette: %s :clock1: %s ago :dart: (%s) views | href=%s emojize=true\n",
+		fmt.Printf("%s | href=%s\n-- :bust_in_silhouette: %s :clock1: %s ago :dart: (%s) views | href=%s emojize=true\n",
 			post.Title,
+			post.URL,
 			post.User.UserName,
 			fromNow(post.UpdatedAt),
 			strconv.Itoa(post.VisitCount),
